@@ -20,6 +20,9 @@
     />
     <link rel="stylesheet" href="style.css" 
     />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="logic.js"></script>
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,27 +33,28 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+<!-- Timeblocks go here -->
       <div class="row" id="9AM">
         <div class="col sm-12, md-4, lg-2">
-          <div class="hour">
-<!--This displays the constant, time on the house-->
+          <div class="hour" value="9AM">
+  <!--This displays the time constant-->
+            <h1>9:00 AM</h1>
           </div>
         </div>
         <div class="col sm-12, md-6, lg-8">
-          <div class="input">
-<!--this is the user input field here-->
+          <div class="input" value="9AM">
+  <!--this is the user input field here-->
+            <input type="text">
           </div>
         </div>
         <div class="col sm-12, md-2, lg-2">
-          <div class="saveBtn">
-<!--This is sthe submit button that saves user input to the field and local storage-->
+          <div class="saveBtn" value="9AM">
+  <!--This is the submit button that saves user input to the field and local storage-->
+            <input type="submit">
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
