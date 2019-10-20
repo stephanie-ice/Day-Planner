@@ -30,10 +30,19 @@ $(document).ready(function(){
             alert("Please, tell us all about your busy life!");
         }  
     });
+
     /*This is the logic to check moment.js for the current time*/
-    /*compares current time to input field id
-    if value of id < current hour, past
-    if value of id = current hour, present (minutes not considered)
-    if value of id > current hour, future
-    toggle the class style based on the comparison outcome*/
+    /*compares current time to row data attribute*/
+    var formTime = $(".row").data("time");
+      JSON.parse(formtime);
+
+    var currentTime = /*(the data value from Moment.js)*/ 
+    /*if value of id < current hour, past*/
+    if (formTime == currentTime) {
+        $(".row").css("background-color" , "light-blue");
+    }
+    /*if value of id = current hour, present (minutes not considered)*/
+    else {}
+    /*if value of id > current hour, future*/
+    /*toggle the class style based on the comparison outcome*/
 });
