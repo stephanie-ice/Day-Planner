@@ -34,15 +34,15 @@ $(document).ready(function(){
     /*This is the logic to check moment.js for the current time*/
     /*compares current time to row data attribute*/
     var formTime = $(".row").data("time");
-      JSON.parse(formtime);
+    var currentTime = moment();
+    var rowTime = moment({hour:formTime}); 
 
-    var currentTime = /*(the data value from Moment.js)*/ 
-    /*if value of id < current hour, past*/
-    if (formTime == currentTime) {
+    /*if value of id > current hour, future*/
+    if (currentTime.isBefore(rowTime)) {
         $(".row").css("background-color" , "light-blue");
     }
-    /*if value of id = current hour, present (minutes not considered)*/
-    else {}
-    /*if value of id > current hour, future*/
-    /*toggle the class style based on the comparison outcome*/
+    /*if value of id < current hour, past*/
+    else {$(".row").css("background-color" , "light-yellow")};
+    
+    
 });
