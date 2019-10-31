@@ -44,5 +44,5 @@ $(document).ready(function(){
     /*if value of id < current hour, past*/
     else {$(".row").css("background-color" , "light-yellow")};
     
-    
+    /*But what kind fo event do I use to initiate this code? It's not a click event.*/
 });
